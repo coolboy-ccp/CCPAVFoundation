@@ -13,6 +13,14 @@
 		0039E0EA1CBF75FB0033B954 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0039E0E81CBF75FB0033B954 /* Main.storyboard */; };
 		0039E0EC1CBF75FB0033B954 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0039E0EB1CBF75FB0033B954 /* Assets.xcassets */; };
 		0039E0EF1CBF75FB0033B954 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0039E0ED1CBF75FB0033B954 /* LaunchScreen.storyboard */; };
+		0039E0F81CBF79250033B954 /* AudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0039E0F71CBF79250033B954 /* AudioViewController.m */; };
+		0039E0FB1CBF79320033B954 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0039E0FA1CBF79320033B954 /* VideoViewController.m */; };
+		0039E0FE1CBF793F0033B954 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0039E0FD1CBF793F0033B954 /* ImageViewController.m */; };
+		0039E1011CBF794B0033B954 /* OtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0039E1001CBF794B0033B954 /* OtherViewController.m */; };
+		0039E1031CBF7C080033B954 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0039E1021CBF7C080033B954 /* AudioToolbox.framework */; };
+		0039E1061CBF801F0033B954 /* soundEffect.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0039E1051CBF801F0033B954 /* soundEffect.wav */; };
+		0039E1081CBF868E0033B954 /* 年轮.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0039E1071CBF868E0033B954 /* 年轮.mp3 */; };
+		0039E10C1CBF8D100033B954 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0039E10B1CBF8D100033B954 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +34,18 @@
 		0039E0EB1CBF75FB0033B954 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0039E0EE1CBF75FB0033B954 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0039E0F01CBF75FB0033B954 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0039E0F61CBF79250033B954 /* AudioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioViewController.h; sourceTree = "<group>"; };
+		0039E0F71CBF79250033B954 /* AudioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioViewController.m; sourceTree = "<group>"; };
+		0039E0F91CBF79320033B954 /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
+		0039E0FA1CBF79320033B954 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
+		0039E0FC1CBF793F0033B954 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
+		0039E0FD1CBF793F0033B954 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
+		0039E0FF1CBF794B0033B954 /* OtherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherViewController.h; sourceTree = "<group>"; };
+		0039E1001CBF794B0033B954 /* OtherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherViewController.m; sourceTree = "<group>"; };
+		0039E1021CBF7C080033B954 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		0039E1051CBF801F0033B954 /* soundEffect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = soundEffect.wav; sourceTree = "<group>"; };
+		0039E1071CBF868E0033B954 /* 年轮.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "年轮.mp3"; sourceTree = "<group>"; };
+		0039E10B1CBF8D100033B954 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0039E10C1CBF8D100033B954 /* AVFoundation.framework in Frameworks */,
+				0039E1031CBF7C080033B954 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +64,8 @@
 		0039E0D31CBF75FB0033B954 = {
 			isa = PBXGroup;
 			children = (
+				0039E10B1CBF8D100033B954 /* AVFoundation.framework */,
+				0039E1021CBF7C080033B954 /* AudioToolbox.framework */,
 				0039E0DE1CBF75FB0033B954 /* CCPAVFoundation */,
 				0039E0DD1CBF75FB0033B954 /* Products */,
 			);
@@ -62,10 +86,19 @@
 				0039E0E31CBF75FB0033B954 /* AppDelegate.m */,
 				0039E0E51CBF75FB0033B954 /* ViewController.h */,
 				0039E0E61CBF75FB0033B954 /* ViewController.m */,
+				0039E0F61CBF79250033B954 /* AudioViewController.h */,
+				0039E0F71CBF79250033B954 /* AudioViewController.m */,
+				0039E0F91CBF79320033B954 /* VideoViewController.h */,
+				0039E0FA1CBF79320033B954 /* VideoViewController.m */,
+				0039E0FC1CBF793F0033B954 /* ImageViewController.h */,
+				0039E0FD1CBF793F0033B954 /* ImageViewController.m */,
+				0039E0FF1CBF794B0033B954 /* OtherViewController.h */,
+				0039E1001CBF794B0033B954 /* OtherViewController.m */,
 				0039E0E81CBF75FB0033B954 /* Main.storyboard */,
 				0039E0EB1CBF75FB0033B954 /* Assets.xcassets */,
 				0039E0ED1CBF75FB0033B954 /* LaunchScreen.storyboard */,
 				0039E0F01CBF75FB0033B954 /* Info.plist */,
+				0039E1041CBF801F0033B954 /* resouce */,
 				0039E0DF1CBF75FB0033B954 /* Supporting Files */,
 			);
 			path = CCPAVFoundation;
@@ -77,6 +110,15 @@
 				0039E0E01CBF75FB0033B954 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0039E1041CBF801F0033B954 /* resouce */ = {
+			isa = PBXGroup;
+			children = (
+				0039E1051CBF801F0033B954 /* soundEffect.wav */,
+				0039E1071CBF868E0033B954 /* 年轮.mp3 */,
+			);
+			path = resouce;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +178,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0039E1081CBF868E0033B954 /* 年轮.mp3 in Resources */,
 				0039E0EF1CBF75FB0033B954 /* LaunchScreen.storyboard in Resources */,
+				0039E1061CBF801F0033B954 /* soundEffect.wav in Resources */,
 				0039E0EC1CBF75FB0033B954 /* Assets.xcassets in Resources */,
 				0039E0EA1CBF75FB0033B954 /* Main.storyboard in Resources */,
 			);
@@ -149,8 +193,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0039E0FE1CBF793F0033B954 /* ImageViewController.m in Sources */,
+				0039E0FB1CBF79320033B954 /* VideoViewController.m in Sources */,
 				0039E0E71CBF75FB0033B954 /* ViewController.m in Sources */,
+				0039E0F81CBF79250033B954 /* AudioViewController.m in Sources */,
 				0039E0E41CBF75FB0033B954 /* AppDelegate.m in Sources */,
+				0039E1011CBF794B0033B954 /* OtherViewController.m in Sources */,
 				0039E0E11CBF75FB0033B954 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,6 +310,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CCPAVFoundation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CCP.CCPAVFoundation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -273,6 +322,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CCPAVFoundation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CCP.CCPAVFoundation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
