@@ -21,6 +21,7 @@
 		0039E1061CBF801F0033B954 /* soundEffect.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0039E1051CBF801F0033B954 /* soundEffect.wav */; };
 		0039E1081CBF868E0033B954 /* 年轮.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0039E1071CBF868E0033B954 /* 年轮.mp3 */; };
 		0039E10C1CBF8D100033B954 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0039E10B1CBF8D100033B954 /* AVFoundation.framework */; };
+		0039E10E1CBF95A10033B954 /* 月亮可以代表我的心.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0039E10D1CBF95A10033B954 /* 月亮可以代表我的心.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		0039E1051CBF801F0033B954 /* soundEffect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = soundEffect.wav; sourceTree = "<group>"; };
 		0039E1071CBF868E0033B954 /* 年轮.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "年轮.mp3"; sourceTree = "<group>"; };
 		0039E10B1CBF8D100033B954 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0039E10D1CBF95A10033B954 /* 月亮可以代表我的心.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "月亮可以代表我的心.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			children = (
 				0039E1051CBF801F0033B954 /* soundEffect.wav */,
 				0039E1071CBF868E0033B954 /* 年轮.mp3 */,
+				0039E10D1CBF95A10033B954 /* 月亮可以代表我的心.mp3 */,
 			);
 			path = resouce;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			files = (
 				0039E1081CBF868E0033B954 /* 年轮.mp3 in Resources */,
 				0039E0EF1CBF75FB0033B954 /* LaunchScreen.storyboard in Resources */,
+				0039E10E1CBF95A10033B954 /* 月亮可以代表我的心.mp3 in Resources */,
 				0039E1061CBF801F0033B954 /* soundEffect.wav in Resources */,
 				0039E0EC1CBF75FB0033B954 /* Assets.xcassets in Resources */,
 				0039E0EA1CBF75FB0033B954 /* Main.storyboard in Resources */,

@@ -20,6 +20,8 @@ void (^blockForTip)(NSString *message) = ^(NSString *str) {
 @property (weak, nonatomic) IBOutlet UIProgressView *musicProgress;
 @property (weak, nonatomic) IBOutlet UILabel *musicNameLabel;
 @property (strong,nonatomic) AVAudioPlayer *audioPlayer;
+@property (strong,nonatomic) NSString *musicName;
+@property (strong,nonatomic) NSTimer *progressTimer;
 
 @end
 
@@ -27,7 +29,7 @@ void (^blockForTip)(NSString *message) = ^(NSString *str) {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
 }
 
 - (void) touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -110,20 +112,51 @@ void soundCompletedCallBack(SystemSoundID soundID,void *clientData) {
     }
 }
 
+- (NSTimer *)progressTimer {
+    if (!_progressTimer) {
+        _progressTimer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(updataProgress:) userInfo:nil repeats:YES];
+    }
+    return _progressTimer;
+}
+
+- (void)updataProgress:(NSTimer *)timer {
+    float progress = self.audioPlayer.currentTime / self.audioPlayer.duration;
+    [self.musicProgress setProgress:progress];
+}
+
+- (NSString *)musicName {
+    _musicName = [_musicName isEqualToString:@"年轮.mp3"] ? @"月亮可以代表我的心.mp3" : @"年轮.mp3";
+    self.musicNameLabel.text = _musicName;
+    return _musicName;
+}
+
 - (IBAction)musicActions:(UIButton *)sender {
     switch (sender.tag) {
         case 200:
-            
+        {
+            _musicName = _musicName ? _musicName : @"年轮.mp3";
+            UIButton *btn = [self.musicView viewWithTag:201];
+            btn.selected = YES;
+            self.audioPlayer = nil;
+            self.musicProgress.progress = 0.0;
+            [self createPlayerWithName:self.musicName];
+            [self.audioPlayer play];
+            self.progressTimer.fireDate = [NSDate distantPast];
+        }
             break;
         case 201:
         {
             sender.selected = !sender.selected;
             if (sender.selected) {
+                [self createPlayerWithName:self.musicName];
                 [self.audioPlayer play];
+                self.progressTimer.fireDate = [NSDate distantPast];
+            }
+            else {
+                [self.audioPlayer pause];
+                self.progressTimer.fireDate = [NSDate distantFuture];
             }
         }
-            break;
-        default:
             break;
     }
 }

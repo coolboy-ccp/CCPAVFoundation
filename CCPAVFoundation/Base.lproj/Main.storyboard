@@ -175,7 +175,7 @@
                                             <action selector="musicActions:" destination="2As-fp-lo0" eventType="touchUpInside" id="UOD-Ne-Xjs"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="202" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j2b-fv-6oa">
+                                    <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j2b-fv-6oa">
                                         <rect key="frame" x="193" y="474" width="87" height="29"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -188,8 +188,9 @@
                                         <rect key="frame" x="20" y="452" width="260" height="2"/>
                                         <animations/>
                                         <color key="progressTintColor" red="0.32156862749999998" green="0.67450980390000004" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="trackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </progressView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="年轮——郭碧晨" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6L-zl-zbW">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="年轮.mp3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6L-zl-zbW">
                                         <rect key="frame" x="87" y="60" width="126" height="22"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
