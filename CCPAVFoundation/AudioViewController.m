@@ -161,4 +161,16 @@ void soundCompletedCallBack(SystemSoundID soundID,void *clientData) {
     }
 }
 
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
+    blockForTip([NSString stringWithFormat:@"%@播放完成",self.musicName]);
+    self.progressTimer.fireDate = [NSDate distantFuture];
+    UIButton *btn = [self.musicView viewWithTag:201];
+    btn.selected = NO;
+}
+
+- (void)dealloc {
+    [self.progressTimer invalidate];
+    self.progressTimer = nil;
+}
+
 @end
