@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0034DADF1CC080C400009899 /* WaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0034DADE1CC080C400009899 /* WaveView.m */; };
 		0039E0E11CBF75FB0033B954 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0039E0E01CBF75FB0033B954 /* main.m */; };
 		0039E0E41CBF75FB0033B954 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0039E0E31CBF75FB0033B954 /* AppDelegate.m */; };
 		0039E0E71CBF75FB0033B954 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0039E0E61CBF75FB0033B954 /* ViewController.m */; };
@@ -25,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0034DADD1CC080C400009899 /* WaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveView.h; sourceTree = "<group>"; };
+		0034DADE1CC080C400009899 /* WaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveView.m; sourceTree = "<group>"; };
 		0039E0DC1CBF75FB0033B954 /* CCPAVFoundation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCPAVFoundation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0039E0E01CBF75FB0033B954 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0039E0E21CBF75FB0033B954 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -97,6 +100,8 @@
 				0039E0FF1CBF794B0033B954 /* OtherViewController.h */,
 				0039E1001CBF794B0033B954 /* OtherViewController.m */,
 				0039E0E81CBF75FB0033B954 /* Main.storyboard */,
+				0034DADD1CC080C400009899 /* WaveView.h */,
+				0034DADE1CC080C400009899 /* WaveView.m */,
 				0039E0EB1CBF75FB0033B954 /* Assets.xcassets */,
 				0039E0ED1CBF75FB0033B954 /* LaunchScreen.storyboard */,
 				0039E0F01CBF75FB0033B954 /* Info.plist */,
@@ -200,6 +205,7 @@
 				0039E0FE1CBF793F0033B954 /* ImageViewController.m in Sources */,
 				0039E0FB1CBF79320033B954 /* VideoViewController.m in Sources */,
 				0039E0E71CBF75FB0033B954 /* ViewController.m in Sources */,
+				0034DADF1CC080C400009899 /* WaveView.m in Sources */,
 				0039E0F81CBF79250033B954 /* AudioViewController.m in Sources */,
 				0039E0E41CBF75FB0033B954 /* AppDelegate.m in Sources */,
 				0039E1011CBF794B0033B954 /* OtherViewController.m in Sources */,
@@ -352,6 +358,7 @@
 				0039E0F51CBF75FB0033B954 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

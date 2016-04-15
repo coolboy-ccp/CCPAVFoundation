@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xoq-Sb-adY">
-                                <rect key="frame" x="130" y="70" width="115" height="34"/>
+                                <rect key="frame" x="130" y="223" width="115" height="34"/>
                                 <animations/>
                                 <state key="normal" title="audioFunction">
                                     <color key="titleColor" red="0.32156862749999998" green="0.67450980390000004" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -30,7 +30,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Adi-S7-OVW">
-                                <rect key="frame" x="130" y="124" width="115" height="34"/>
+                                <rect key="frame" x="130" y="277" width="115" height="34"/>
                                 <animations/>
                                 <state key="normal" title="videoFunction">
                                     <color key="titleColor" red="0.32156862749999998" green="0.67450980390000004" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -40,7 +40,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCy-nx-dfv">
-                                <rect key="frame" x="127" y="178" width="120" height="34"/>
+                                <rect key="frame" x="127" y="331" width="120" height="34"/>
                                 <animations/>
                                 <state key="normal" title="imageFunction">
                                     <color key="titleColor" red="0.32156862749999998" green="0.67450980390000004" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -50,7 +50,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r44-SI-a9D">
-                                <rect key="frame" x="130" y="232" width="114" height="34"/>
+                                <rect key="frame" x="130" y="385" width="114" height="34"/>
                                 <animations/>
                                 <state key="normal" title="otherFunction">
                                     <color key="titleColor" red="0.32156862749999998" green="0.67450980390000004" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -63,8 +63,8 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Adi-S7-OVW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-40" id="CPE-sb-p8P"/>
                             <constraint firstItem="Xoq-Sb-adY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HpX-Px-ylk"/>
-                            <constraint firstItem="Xoq-Sb-adY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="M9o-ZN-j1s"/>
                             <constraint firstItem="Adi-S7-OVW" firstAttribute="top" secondItem="Xoq-Sb-adY" secondAttribute="bottom" constant="20" id="SIZ-2O-dDR"/>
                             <constraint firstItem="r44-SI-a9D" firstAttribute="top" secondItem="bCy-nx-dfv" secondAttribute="bottom" constant="20" id="bNh-ll-TpF"/>
                             <constraint firstItem="r44-SI-a9D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c4c-rl-ZAy"/>
@@ -111,7 +111,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tvM-AT-NVA">
-                                <rect key="frame" x="143" y="80" width="88" height="32"/>
+                                <rect key="frame" x="143" y="222" width="88" height="32"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="soundEffect">
@@ -122,7 +122,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ryc-OV-O4D">
-                                <rect key="frame" x="166" y="132" width="43" height="32"/>
+                                <rect key="frame" x="166" y="274" width="43" height="32"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="music">
@@ -143,10 +143,16 @@
                                     <action selector="soundEffectAction:" destination="2As-fp-lo0" eventType="touchUpInside" id="Keq-wj-eHm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFn-xe-zLt">
-                                <rect key="frame" x="164" y="431" width="46" height="30"/>
+                            <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFn-xe-zLt">
+                                <rect key="frame" x="159" y="362" width="57" height="32"/>
                                 <animations/>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="recorde">
+                                    <color key="titleColor" red="0.32156862749999998" green="0.67450980390000004" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="soundEffectAction:" destination="2As-fp-lo0" eventType="touchUpInside" id="oiN-cW-ESm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6e-lP-a45">
                                 <rect key="frame" x="164" y="527" width="46" height="30"/>
@@ -224,6 +230,52 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y4t-J9-Sb5">
+                                <rect key="frame" x="38" y="67" width="300" height="533"/>
+                                <subviews>
+                                    <button opaque="NO" tag="301" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mb6-xH-tel">
+                                        <rect key="frame" x="0.0" y="471" width="100" height="32"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="开始录音"/>
+                                        <connections>
+                                            <action selector="recorderController:" destination="2As-fp-lo0" eventType="touchUpInside" id="h2R-ui-CIN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="302" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iuF-dT-eAQ">
+                                        <rect key="frame" x="100" y="471" width="100" height="32"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="暂停录音"/>
+                                        <state key="selected" title="恢复录音"/>
+                                        <connections>
+                                            <action selector="recorderController:" destination="2As-fp-lo0" eventType="touchUpInside" id="z3T-ul-1IS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="303" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSH-bR-OEb">
+                                        <rect key="frame" x="200" y="471" width="100" height="32"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="停止录音"/>
+                                        <connections>
+                                            <action selector="recorderController:" destination="2As-fp-lo0" eventType="touchUpInside" id="gpT-Nb-KJr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.28235294117647058" green="0.47843137254901957" blue="0.56470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="iuF-dT-eAQ" firstAttribute="width" secondItem="gSH-bR-OEb" secondAttribute="width" id="0sT-ud-yuM"/>
+                                    <constraint firstItem="mb6-xH-tel" firstAttribute="width" secondItem="iuF-dT-eAQ" secondAttribute="width" id="1gv-Xf-RcE"/>
+                                    <constraint firstItem="iuF-dT-eAQ" firstAttribute="bottom" secondItem="gSH-bR-OEb" secondAttribute="bottom" id="C3H-yV-kHS"/>
+                                    <constraint firstAttribute="bottom" secondItem="mb6-xH-tel" secondAttribute="bottom" constant="30" id="JE1-cE-UVv"/>
+                                    <constraint firstAttribute="trailing" secondItem="gSH-bR-OEb" secondAttribute="trailing" id="PGl-OM-dhd"/>
+                                    <constraint firstItem="mb6-xH-tel" firstAttribute="bottom" secondItem="iuF-dT-eAQ" secondAttribute="bottom" id="RT3-BQ-AjZ"/>
+                                    <constraint firstItem="gSH-bR-OEb" firstAttribute="leading" secondItem="iuF-dT-eAQ" secondAttribute="trailing" id="elm-X0-WeB"/>
+                                    <constraint firstItem="iuF-dT-eAQ" firstAttribute="leading" secondItem="mb6-xH-tel" secondAttribute="trailing" id="hrb-Aw-Fuf"/>
+                                    <constraint firstItem="mb6-xH-tel" firstAttribute="leading" secondItem="y4t-J9-Sb5" secondAttribute="leading" id="te0-zz-L9w"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -237,20 +289,33 @@
                             <constraint firstItem="kZn-SG-eJd" firstAttribute="centerX" secondItem="SNl-ml-x4O" secondAttribute="centerX" id="CUD-W7-2K3"/>
                             <constraint firstItem="65J-4U-s1r" firstAttribute="centerX" secondItem="kZn-SG-eJd" secondAttribute="centerX" id="EXh-LC-KJ6"/>
                             <constraint firstItem="ryc-OV-O4D" firstAttribute="centerX" secondItem="SNl-ml-x4O" secondAttribute="centerX" id="Ek4-mu-snj"/>
+                            <constraint firstItem="OFn-xe-zLt" firstAttribute="centerX" secondItem="SNl-ml-x4O" secondAttribute="centerX" id="LVa-Wz-axJ"/>
+                            <constraint firstItem="y4t-J9-Sb5" firstAttribute="trailing" secondItem="kZn-SG-eJd" secondAttribute="trailing" id="Lbx-cx-PDT"/>
+                            <constraint firstItem="y4t-J9-Sb5" firstAttribute="leading" secondItem="kZn-SG-eJd" secondAttribute="leading" id="Lhd-0O-dfy"/>
                             <constraint firstItem="65J-4U-s1r" firstAttribute="centerY" secondItem="kZn-SG-eJd" secondAttribute="centerY" id="bH6-PA-Z34"/>
+                            <constraint firstItem="y4t-J9-Sb5" firstAttribute="top" secondItem="kZn-SG-eJd" secondAttribute="top" id="beQ-vv-XgN"/>
+                            <constraint firstItem="y4t-J9-Sb5" firstAttribute="bottom" secondItem="kZn-SG-eJd" secondAttribute="bottom" id="hIc-nV-pSC"/>
+                            <constraint firstItem="jRB-FA-dS3" firstAttribute="top" secondItem="ryc-OV-O4D" secondAttribute="bottom" constant="10" id="hdv-1y-ajP"/>
                             <constraint firstItem="kZn-SG-eJd" firstAttribute="height" secondItem="SNl-ml-x4O" secondAttribute="height" multiplier="0.8" id="kiZ-bO-0y0"/>
                             <constraint firstItem="tvM-AT-NVA" firstAttribute="top" secondItem="Qff-Fm-9H1" secondAttribute="bottom" constant="60" id="x17-v0-TzJ"/>
+                            <constraint firstItem="OFn-xe-zLt" firstAttribute="top" secondItem="jRB-FA-dS3" secondAttribute="bottom" constant="10" id="yCX-b3-2uZ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="x17-v0-TzJ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="musicNameLabel" destination="f6L-zl-zbW" id="CLB-eT-XiP"/>
                         <outlet property="musicProgress" destination="Q09-9U-lSB" id="Ps3-yf-kUJ"/>
                         <outlet property="musicView" destination="kZn-SG-eJd" id="hin-tg-8Ov"/>
+                        <outlet property="recorderView" destination="y4t-J9-Sb5" id="4RG-FM-7T4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="96s-v8-a4q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.5" y="58.5"/>
+            <point key="canvasLocation" x="-58.5" y="34.5"/>
         </scene>
         <!--otherView-->
         <scene sceneID="OvM-Gb-KGq">

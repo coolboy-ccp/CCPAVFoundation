@@ -15,13 +15,16 @@ void (^blockForTip)(NSString *message) = ^(NSString *str) {
     [alert show];
 };
 
-@interface AudioViewController ()<AVAudioPlayerDelegate>
+@interface AudioViewController ()<AVAudioPlayerDelegate,AVAudioRecorderDelegate>
 @property (weak, nonatomic) IBOutlet UIView *musicView;
 @property (weak, nonatomic) IBOutlet UIProgressView *musicProgress;
 @property (weak, nonatomic) IBOutlet UILabel *musicNameLabel;
 @property (strong,nonatomic) AVAudioPlayer *audioPlayer;
 @property (strong,nonatomic) NSString *musicName;
 @property (strong,nonatomic) NSTimer *progressTimer;
+@property (weak, nonatomic) IBOutlet UIView *recorderView;
+@property (strong,nonatomic) AVAudioRecorder *recorder;
+@property (strong,nonatomic) AVAudioPlayer *recorderPlayer;
 
 @end
 
@@ -29,7 +32,7 @@ void (^blockForTip)(NSString *message) = ^(NSString *str) {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self setAudioSession];
 }
 
 - (void) touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -41,7 +44,13 @@ void (^blockForTip)(NSString *message) = ^(NSString *str) {
             self.musicView.hidden = YES;
         }];
     }
-    
+    if (!CGRectContainsPoint(self.recorderView.frame, point)) {
+        [UIView animateWithDuration:0.5 animations:^{
+            self.recorderView.alpha = 0.0f;
+        } completion:^(BOOL finished) {
+            self.recorderView.hidden = YES;
+        }];
+    }
 }
 
 
@@ -61,6 +70,13 @@ void (^blockForTip)(NSString *message) = ^(NSString *str) {
             }];
         }
             break;
+        case 103:
+        {
+            self.recorderView.hidden = NO;
+            [UIView animateWithDuration:0.5 animations:^{
+                self.recorderView.alpha = 0.9f;
+            }];
+        }
         default:
             break;
     }
@@ -166,6 +182,105 @@ void soundCompletedCallBack(SystemSoundID soundID,void *clientData) {
     self.progressTimer.fireDate = [NSDate distantFuture];
     UIButton *btn = [self.musicView viewWithTag:201];
     btn.selected = NO;
+}
+
+/*
+ 录音
+ 
+ */
+
+- (void)setAudioSession {
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    [session setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
+    [session setActive:YES error:nil];
+}
+
+- (NSURL *)getSavePath {
+    NSString *urlStr = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingPathComponent:@"ccp/recoderDemo.caf"];
+    return [NSURL fileURLWithPath:urlStr];
+}
+
+- (NSDictionary *)getAudioSetting {
+    NSMutableDictionary *dicM = [NSMutableDictionary dictionary];
+    //录音格式
+    [dicM setObject:@(kAudioFormatLinearPCM) forKey:AVFormatIDKey];
+    //录音采样率
+    [dicM setObject:@(8000) forKey:AVSampleRateKey];
+    //录音通道
+    [dicM setObject:@(1) forKey:AVNumberOfChannelsKey];
+    //每个采样点位数，分为8、16、24、32
+    [dicM setObject:@(8) forKey:AVLinearPCMBitDepthKey];
+    //是否使用浮点数采样
+    [dicM setObject:@(YES) forKey:AVLinearPCMIsFloatKey];
+    return dicM;
+}
+
+- (AVAudioRecorder *)recorder {
+    if (!_recorder) {
+        NSError *error = nil;
+        _recorder = [[AVAudioRecorder alloc] initWithURL:[self getSavePath] settings:[self getAudioSetting] error:&error];
+        _recorder.delegate = self;
+        //声波检测
+        _recorder.meteringEnabled = YES;
+        if (error) {
+            blockForTip([NSString stringWithFormat:@"error:%@",error.localizedDescription]);
+            return nil;
+        }
+    }
+    return _recorder;
+}
+
+- (IBAction)recorderController:(UIButton *)sender {
+    switch (sender.tag) {
+        case 301:
+        {
+            if (![self.recorder isRecording]) {
+                [self.recorder record];
+            }
+        }
+            break;
+        case 302:
+        {
+            sender.selected = !sender.selected;
+            if (sender.selected) {
+                [self.recorder pause];
+            }
+            else {
+                UIButton *btn = [self.recorderView viewWithTag:301];
+                [self recorderController:btn];
+            }
+        }
+            break;
+        case 303:
+        {
+            [self.recorder stop];
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+
+- (AVAudioPlayer *)recorderPlayer {
+    if (!_recorderPlayer) {
+        NSError *error = nil;
+        _recorderPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[self getSavePath] error:&error];
+        _recorderPlayer.numberOfLoops = 0;
+        [_recorderPlayer prepareToPlay];
+        if (error) {
+            blockForTip([NSString stringWithFormat:@"error:%@",error.localizedDescription]);
+            return nil;
+        }
+    }
+    return _recorderPlayer;
+}
+
+- (void)audioRecorderDidFinishRecording:(AVAudioRecorder *)recorder successfully:(BOOL)flag {
+    if (![self.recorderPlayer isPlaying]) {
+        [self.recorderPlayer play];
+    }
+    
 }
 
 - (void)dealloc {
